@@ -1,4 +1,4 @@
-package ui.swing;
+package imagebrowser.ui.swing;
 
 public class ActionListenerFactory {
 

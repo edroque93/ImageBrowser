@@ -1,4 +1,4 @@
-package ui;
+package imagebrowser.ui;
 
 public class ImageViewer {
 

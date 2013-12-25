@@ -1,4 +1,4 @@
-package ui.swing;
+package imagebrowser.ui.swing;
 
 import java.awt.BorderLayout;
 import javax.swing.JButton;
