@@ -1,5 +1,7 @@
 package imagebrowser;
 
+import ui.swing.ApplicationFrame;
+
 public class Application {
 
     private ApplicationFrame frame;
