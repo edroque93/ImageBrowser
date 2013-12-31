@@ -8,4 +8,7 @@ public class NextImageCommand extends ImageCommand {
         super(viewer);
     }
 
+    public void execute() {
+        this.getViewer().showNextImage();
+    }
 }

@@ -8,4 +8,7 @@ public class PrevImageCommand extends ImageCommand {
         super(viewer);
     }
 
+    public void execute() {
+        this.getViewer().showPrevImage();
+    }
 }

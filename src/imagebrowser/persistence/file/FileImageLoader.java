@@ -13,11 +13,11 @@ public class FileImageLoader implements ImageLoader {
 
     private final String fileName;
 
-    public FileImageLoader(String filename) {
-        this.fileName = filename;
+    public FileImageLoader(String fileName) {
+        this.fileName = fileName;
     }
 
-    public String getFilename() {
+    public String getFileName() {
         return fileName;
     }
 
@@ -29,7 +29,7 @@ public class FileImageLoader implements ImageLoader {
     private BufferedImage loadBufferedImage() {
         try {
             return ImageIO.read(new File(fileName));
-        } catch (IOException ex) {
+        } catch (IOException exception) {
             return null;
         }
     }
