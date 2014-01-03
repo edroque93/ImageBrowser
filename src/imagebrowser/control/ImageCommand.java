@@ -14,4 +14,6 @@ public abstract class ImageCommand {
         return viewer;
     }
     
+    public abstract void execute();
+    
 }
