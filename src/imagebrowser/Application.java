@@ -16,16 +16,23 @@ import java.util.Map;
 
 public class Application {
 
+    private ApplicationFrame frame;
+    private Map<String, ImageCommand> commandMap;
+    private static String path;
+
     public static void main(String[] args) {
+        try {
+            path = getPathFromParam(args);
+        } catch (java.lang.Exception e) {
+            e.printStackTrace(System.err);
+            System.exit(1);
+        }
+
         new Application().execute();
     }
 
-    private ApplicationFrame frame;
-    private Map<String, ImageCommand> commandMap;
-    private static final String PATH = "F:\\Users\\Quique\\Documents\\ImageBrowser\\uniq";
-
     private void execute() {
-        ImageListLoader loader = createImageListLoader(PATH);
+        ImageListLoader loader = createImageListLoader(path);
         List<Image> list = loader.load();
         frame = new ApplicationFrame(createActionListenerFactory());
         frame.getImageViewer().setImage(list.get(0));
@@ -62,4 +69,9 @@ public class Application {
         };
     }
 
+    private static String getPathFromParam(String[] args) throws java.lang.Exception {
+        if (args.length < 1)
+            throw new Exception("Path is missing");
+        return args[0];
+    }
 }

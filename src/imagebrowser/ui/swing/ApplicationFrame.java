@@ -14,7 +14,8 @@ public class ApplicationFrame extends JFrame {
     public ApplicationFrame(ActionListenerFactory factory) {
         super("Image Browser");
         this.factory = factory;
-        this.setSize(400, 300);
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.createComponents();
     }
